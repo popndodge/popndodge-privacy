@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PopNDodge - Privacy Policy</title>
+    <title>PopNDodge - Privacy Policy / Gizlilik Politikası</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             background-color: #121212;
             color: #e0e0e0;
@@ -14,42 +14,144 @@
             margin: 0 auto;
             padding: 20px;
         }
+        .container {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background-color: #2c2c2c;
+            color: #00e5ff;
+            border: 1px solid #00e5ff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .lang-btn:hover, .lang-btn.active {
+            background-color: #00e5ff;
+            color: #121212;
+        }
         h1, h2 {
             color: #00e5ff;
         }
         a {
             color: #76ff03;
+            text-decoration: none;
         }
-        .container {
-            background-color: #1e1e1e;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        a:hover {
+            text-decoration: underline;
+        }
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.85em;
+            color: #888;
+            border-top: 1px solid #333;
+            padding-top: 15px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>PopNDodge - Privacy Policy</h1>
-        <p><strong>Effective Date:</strong> August 2026</p>
-        <p>PopNDodge ("the Game") respects user privacy. This Privacy Policy outlines how your information is handled when using our application.</p>
+        <!-- Dil Değiştirme Butonları -->
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('tr')">🇹🇷 Türkçe</button>
+            <button class="lang-btn" onclick="switchLang('en')">🇬🇧 English</button>
+        </div>
 
-        <h2>1. Information Collection and Use</h2>
-        <p>PopNDodge does <strong>NOT</strong> collect, store, or share any personally identifiable information (PII), device identifiers, precise location data, or usage analytics. Your privacy is fully respected.</p>
+        <!-- TÜRKÇE İÇERİK -->
+        <div id="lang-tr" class="lang-content active">
+            <h1>PopNDodge - Gizlilik Politikası</h1>
+            <p><strong>Yürürlük Tarihi:</strong> Ağustos 2026</p>
+            <p>PopNDodge ("Oyun") olarak kullanıcılarımızın gizliliğine büyük önem veriyoruz. Bu Gizlilik Politikası, oyunumuzu kullanırken verilerinizin nasıl işlendiğini açıklar.</p>
 
-        <h2>2. Local Data Storage</h2>
-        <p>The Game only stores essential gameplay data (such as high scores, unlocked characters, current level progress, and game settings) locally on your device's internal storage. This data remains on your device and is never transmitted to external servers.</p>
+            <h2>1. Kişisel Verilerin Toplanması</h2>
+            <p>PopNDodge, doğrudan isim, e-posta adresi, telefon numarası veya hassas konum gibi kişisel tanımlanabilir bilgileri (PII) <strong>toplamaz ve saklamaz</strong>.</p>
 
-        <h2>3. Third-Party Services & Advertising</h2>
-<p>PopNDodge uses Google AdMob to serve advertisements (such as Rewarded Ads for extra lives or temporary character unlocks). Google AdMob may collect and use pseudonymous device identifiers, IP addresses, and standard system data to serve ads. You can review Google's Privacy Policy at: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+            <h2>2. Yerel Veri Depolama</h2>
+            <p>Oyun, ilerleme durumunuzu sağlamak için yalnızca cihazınızın yerel depolama alanını (Shared Preferences) kullanır. Bu alanda saklanan veriler şunlardır:</p>
+            <ul>
+                <li>Ulaşılan en yüksek seviye ve kayıt noktaları (Checkpoint)</li>
+                <li>Oyun içi skorlar ve ayarlar (Ses, Dil vb.)</li>
+                <li>Açılan karakterler ve reklamla kazanılan 7 günlük geçici karakter erişim zaman damgaları (Timestamp)</li>
+            </ul>
+            <p>Bu veriler tamamen cihazınızda kalır ve dış sunuculara aktarılmaz.</p>
 
-        <h2>4. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes.</p>
+            <h2>3. Üçüncü Taraf Hizmetler ve Reklamlar (Google AdMob)</h2>
+            <p>Oyunumuzda ödüllü reklamlar (Örn: Can kazanma veya geçici karakter açma) sunabilmek için <strong>Google AdMob</strong> SDK'sı kullanılmaktadır. Google AdMob, reklam hizmeti sunmak ve analitik sağlamak amacıyla aşağıdaki verileri toplayabilir:</p>
+            <ul>
+                <li>Cihaz reklam kimliği (GAID)</li>
+                <li>IP adresi ve cihaz teknik bilgileri</li>
+                <li>Reklam etkileşim verileri</li>
+            </ul>
+            <p>Google'ın verileri nasıl işlediğini incelemek için: <a href="https://policies.google.com/privacy" target="_blank">Google Gizlilik Politikası</a></p>
 
-        <h2>5. Contact Us</h2>
-        <p>If you have any questions or suggestions about this Privacy Policy, feel free to contact us at: <a href="mailto:popndodge@gmail.com
-">popndodge@gmail.com
-</a></p>
+            <h2>4. İletişim</h2>
+            <p>Gizlilik politikamız hakkında sorularınız varsa bizimle iletişime geçebilirsiniz:</p>
+            <p>E-posta: <a href="mailto:popndodge@gmail.com">popndodge@gmail.com</a></p>
+        </div>
+
+        <!-- İNGİLİZCE İÇERİK -->
+        <div id="lang-en" class="lang-content">
+            <h1>PopNDodge - Privacy Policy</h1>
+            <p><strong>Effective Date:</strong> August 2026</p>
+            <p>PopNDodge ("the Game") values user privacy. This Privacy Policy outlines how your information is handled when using our application.</p>
+
+            <h2>1. Information Collection</h2>
+            <p>PopNDodge does <strong>NOT</strong> directly collect or store personally identifiable information (PII) such as names, email addresses, phone numbers, or precise location data.</p>
+
+            <h2>2. Local Data Storage</h2>
+            <p>The Game uses your device's local storage (Shared Preferences) solely to maintain your gameplay progress. Local data includes:</p>
+            <ul>
+                <li>Highest reached levels and level checkpoints</li>
+                <li>High scores and game preferences (Sound, Language, etc.)</li>
+                <li>Unlocked characters and temporary 7-day reward timestamps</li>
+            </ul>
+            <p>This data remains strictly on your device and is never transmitted to external servers.</p>
+
+            <h2>3. Third-Party Services & Advertising (Google AdMob)</h2>
+            <p>We utilize <strong>Google AdMob</strong> to display rewarded video ads (e.g., reviving or unlocking temporary characters). Google AdMob may collect and process pseudonymous data, including:</p>
+            <ul>
+                <li>Advertising ID (GAID)</li>
+                <li>IP address and system diagnostic information</li>
+                <li>Ad interaction statistics</li>
+            </ul>
+            <p>To learn more about how Google processes data, please visit: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></p>
+
+            <h2>4. Contact Us</h2>
+            <p>If you have any questions regarding this Privacy Policy, feel free to contact us:</p>
+            <p>Email: <a href="mailto:popndodge@gmail.com">popndodge@gmail.com</a></p>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 PopNDodge. All rights reserved.</p>
+        </footer>
     </div>
+
+    <!-- Dil Değiştirme Scripti -->
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById('lang-' + lang).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
