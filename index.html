@@ -1,3 +1,8 @@
+Paylaştığın tam HTML koduna **Veri Silme (Data Deletion)** ve **Çocukların Gizliliği (Children's Privacy)** maddelerini hem Türkçe hem de İngilizce bölümlerine eksiksiz olarak ekledim.
+
+Mevcut HTML yapını, stillerini ve JavaScript dil değiştirme fonksiyonunu birebir koruyarak güncellediğim kod aşağıdadır. Doğrudan kopyalayıp web sayfana yapıştırabilirsin:
+
+```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -83,16 +88,19 @@
             <h2>1. Kişisel Verilerin Toplanması</h2>
             <p>PopNDodge, doğrudan isim, e-posta adresi, telefon numarası veya hassas konum gibi kişisel tanımlanabilir bilgileri (PII) <strong>toplamaz ve saklamaz</strong>.</p>
 
-            <h2>2. Yerel Veri Depolama</h2>
+            <h2>2. Yerel Veri Depolama ve Veri Silme (Data Deletion)</h2>
             <p>Oyun, ilerleme durumunuzu sağlamak için yalnızca cihazınızın yerel depolama alanını (Shared Preferences) kullanır. Bu alanda saklanan veriler şunlardır:</p>
             <ul>
                 <li>Ulaşılan en yüksek seviye ve kayıt noktaları (Checkpoint)</li>
                 <li>Oyun içi skorlar ve ayarlar (Ses, Dil vb.)</li>
                 <li>Açılan karakterler ve reklamla kazanılan 7 günlük geçici karakter erişim zaman damgaları (Timestamp)</li>
             </ul>
-            <p>Bu veriler tamamen cihazınızda kalır ve dış sunuculara aktarılmaz.</p>
+            <p>Bu veriler tamamen cihazınızda kalır ve dış sunuculara aktarılmaz. <strong>Oyun verileri yalnızca cihazınızda saklandığı için, uygulamayı cihazınızdan kaldırdığınızda tüm ilerlemeniz, skorlarınız ve ayarlarınız kalıcı olarak silinir.</strong></p>
 
-            <h2>3. Üçüncü Taraf Hizmetler ve Reklamlar (Google AdMob)</h2>
+            <h2>3. Çocukların Gizliliği (Children's Privacy)</h2>
+            <p>PopNDodge, 13 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamaz. Eğer bir ebeveyn veya vasi olarak çocuğunuzun bize herhangi bir şekilde kişisel veri sağladığını düşünüyorsanız, lütfen bizimle iletişime geçin; bu bilgileri kayıtlarımızdan derhal sileceğiz.</p>
+
+            <h2>4. Üçüncü Taraf Hizmetler ve Reklamlar (Google AdMob)</h2>
             <p>Oyunumuzda ödüllü reklamlar (Örn: Can kazanma veya geçici karakter açma) sunabilmek için <strong>Google AdMob</strong> SDK'sı kullanılmaktadır. Google AdMob, reklam hizmeti sunmak ve analitik sağlamak amacıyla aşağıdaki verileri toplayabilir:</p>
             <ul>
                 <li>Cihaz reklam kimliği (GAID)</li>
@@ -101,7 +109,7 @@
             </ul>
             <p>Google'ın verileri nasıl işlediğini incelemek için: <a href="https://policies.google.com/privacy" target="_blank">Google Gizlilik Politikası</a></p>
 
-            <h2>4. İletişim</h2>
+            <h2>5. İletişim</h2>
             <p>Gizlilik politikamız hakkında sorularınız varsa bizimle iletişime geçebilirsiniz:</p>
             <p>E-posta: <a href="mailto:popndodge@gmail.com">popndodge@gmail.com</a></p>
         </div>
@@ -115,16 +123,19 @@
             <h2>1. Information Collection</h2>
             <p>PopNDodge does <strong>NOT</strong> directly collect or store personally identifiable information (PII) such as names, email addresses, phone numbers, or precise location data.</p>
 
-            <h2>2. Local Data Storage</h2>
+            <h2>2. Local Data Storage & Data Deletion</h2>
             <p>The Game uses your device's local storage (Shared Preferences) solely to maintain your gameplay progress. Local data includes:</p>
             <ul>
                 <li>Highest reached levels and level checkpoints</li>
                 <li>High scores and game preferences (Sound, Language, etc.)</li>
                 <li>Unlocked characters and temporary 7-day reward timestamps</li>
             </ul>
-            <p>This data remains strictly on your device and is never transmitted to external servers.</p>
+            <p>This data remains strictly on your device and is never transmitted to external servers. <strong>Because all game data is stored solely on your device, uninstalling the Application from your device will permanently delete all your progress, high scores, and settings.</strong></p>
 
-            <h2>3. Third-Party Services & Advertising (Google AdMob)</h2>
+            <h2>3. Children's Privacy</h2>
+            <p>PopNDodge does not knowingly collect any personal information from children under the age of 13. If you are a parent or guardian and believe that your child has provided us with any personal data, please contact us immediately, and we will promptly delete such information from our records.</p>
+
+            <h2>4. Third-Party Services & Advertising (Google AdMob)</h2>
             <p>We utilize <strong>Google AdMob</strong> to display rewarded video ads (e.g., reviving or unlocking temporary characters). Google AdMob may collect and process pseudonymous data, including:</p>
             <ul>
                 <li>Advertising ID (GAID)</li>
@@ -133,7 +144,7 @@
             </ul>
             <p>To learn more about how Google processes data, please visit: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></p>
 
-            <h2>4. Contact Us</h2>
+            <h2>5. Contact Us</h2>
             <p>If you have any questions regarding this Privacy Policy, feel free to contact us:</p>
             <p>Email: <a href="mailto:popndodge@gmail.com">popndodge@gmail.com</a></p>
         </div>
@@ -155,3 +166,5 @@
     </script>
 </body>
 </html>
+
+```
